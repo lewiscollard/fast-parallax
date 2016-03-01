@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Fast Parallax test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="section split">
+        <div class="split-image">
+
+        </div>
+        <div class="split-content fast-parallax" data-parallax-y-by="2">
+          <h2 class="split-content_header">Title of this</h2>
+          Give thanks to the most high. Look at the sunset, life is amazing, life is beautiful, life is what you make it. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key.
+        </div>
+      </div>
+
+      <div class="section split">
+        <div class="split-image fast-parallax" data-parallax-y-by="2" style="background-image: url(images/kev.jpg)">
+
+        </div>
+        <div class="split-content fast-parallax" data-parallax-y-by="-2">
+          <h2 class="split-content_header">Negative values</h2>
+
+          <p>
+            Passing a negative <var>data-parallax-y-by</var> value will cause
+            the element to be 'reluctant' to leave the viewport.
+            <br /><br />
+            Very large values may have interesting effects.
+        </div>
+      </div>
+
+      <div class="section split fast-parallax" data-parallax-y-by="2">
+        <div class="split-image">
+
+        </div>
+        <div class="split-content fast-parallax" data-parallax-y-by="2">
+          <h2 class="split-content_header">Title of this</h2>
+          Give thanks to the most high. Look at the sunset, life is amazing, life is beautiful, life is what you make it. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key.
+        </div>
+      </div>
+
+      <div class="section background">
+        <div class="background-image fast-parallax" style="background-image: url(images/kev.jpg)" data-parallax-y-by="2">
+
+        </div>
+
+        <div class="background-overlay"></div>
+
+        <div class="background-content">
+          <h2 class="background-content_header">Using other properties</h2>
+
+          <p class="background-content_text">
+            Nope, you can't parallax other properties, but the
+            <var>translate3d</var> transform can simulate some of them quite
+            well. This section is simulating the <var>background-position</var>
+            property by using an absolutely positioned element and
+            <var>data-parallax-y-by="2"</var>.
+          </p>
+        </div>
+      </div>
+
+      <div class="section split">
+        <div class="split-image fast-parallax" data-parallax-x-by="-0.5" data-parallax-unit="vw">
+
+        </div>
+        <div class="split-content fast-parallax" data-parallax-x-by="0.5" data-parallax-unit="vw">
+          <h2 class="split-content_header">Parallax the X dimension</h2>
+
+          <p>
+            It was very little extra effort to make this work in the X
+            dimension as well, so I did!
+            <br /><br />
+            Here, the image has a small negative <var>data-parallax-x-by</var>
+            attribute and this block has a small positive one.
+          </p>
+        </div>
+      </div>
+
+      <div class="section split">
+        <div class="split-image fast-parallax" data-parallax-x-by="-1" data-parallax-restrict-to="negative">
+
+        </div>
+        <div class="split-content fast-parallax" data-parallax-x-by="1" data-parallax-restrict-to="positive">
+          <h2 class="split-content_header">Restricting to positive and negative values</h2>
+          Give thanks to the most high. Look at the sunset, life is amazing, life is beautiful, life is what you make it. In life you have to take the trash out, if you have trash in your life, take it out, throw it away, get rid of it, major key.
+        </div>
+      </div>
+
+      <div style="height: 100vw">
+
+      </div>
+
+    </div>
+
+    <script src="fast-parallax.js"></script>
+  </body>
+</html>

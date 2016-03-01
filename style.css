@@ -1,0 +1,113 @@
+body {
+  background-color: #eee;
+}
+
+var {
+  font-family: monospace;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section + .section {
+  margin-top: 5%;
+}
+
+.split {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  position: relative;
+  width: 60%;
+
+  margin: 0 auto;
+}
+
+.split:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.split-content {
+  background-color: #fff;
+
+  padding: 20px;
+
+  width: 55%;
+  float: right;
+
+  position: relative;
+  z-index: 2;
+}
+
+.split-content_header {
+  margin-top: 0;
+}
+
+.split-image {
+  z-index: 1;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 55%;
+
+  background-color: #ccc;
+  background-size: cover;
+}
+
+.background {
+  position: relative;
+  overflow: hidden;
+
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.background-image {
+  z-index: 1;
+
+  position: absolute;
+  top: -25%;
+  right: 0;
+  bottom: -25%;
+  left: 0;
+
+  background-size: cover;
+}
+
+.background-overlay {
+  z-index: 2;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background: linear-gradient(to right, rgba(0 ,0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.background-content {
+  z-index: 3;
+
+  position: relative;
+
+  padding-right: 5%;
+  padding-left: 5%;
+
+  color: #fff;
+
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 768px) {
+  .background-content {
+    width: 50%;
+  }
+}
