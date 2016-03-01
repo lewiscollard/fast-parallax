@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var parallaxElementsA = [].slice.call(document.getElementsByClassName('fast-parallax'));
+  var parallaxElementsA = [];
   var parallaxElements = [];
 
   /*
@@ -23,8 +23,6 @@
     // (for IE9), etc.
     return
   }
-
-  console.log(nullElement)
 
   // Store these, as they don't change with every scroll.
   var windowHeight;
@@ -172,6 +170,13 @@
       item.element.style[transformProperty] = "translate3d(" + xOffset.toString() + item.unit + ", " + yOffset.toString() + item.unit + ", 0)";
     }
   }
-  scrollHook()
-  window.addEventListener('scroll', scrollHook)
+
+  function initialise() {
+    parallaxElementsA = [].slice.call(document.getElementsByClassName('fast-parallax'));
+    recalculateElementOffsets();
+    scrollHook();
+    window.addEventListener('scroll', scrollHook);
+  }
+
+  window.addEventListener('DOMContentLoaded', initialise);
 })();
