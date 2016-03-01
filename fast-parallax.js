@@ -1,6 +1,12 @@
 (function () {
   "use strict";
 
+  // Prehistory. Someone might need to support these gusy, and there's no
+  // need to cause an exception.
+  if (!window.addEventListener) {
+    return;
+  }
+
   var parallaxElementsA = [];
   var parallaxElements = [];
 
