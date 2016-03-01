@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  // Prehistory. Someone might need to support these gusy, and there's no
+  // Prehistory. Someone might need to support these guys, and there's no
   // need to cause an exception.
   if (!window.addEventListener) {
     return;
